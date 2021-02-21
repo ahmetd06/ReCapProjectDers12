@@ -10,6 +10,8 @@ namespace Business.ValidationRules.FluentValidation
         {
             RuleFor(p => p.CompanyName).NotEmpty();
             RuleFor(p => p.UserId).NotEmpty();
+            RuleFor(p => p.CompanyName).MinimumLength(5);
+            RuleFor(p => p.CompanyName).MaximumLength(50);
         }
     }
 }
